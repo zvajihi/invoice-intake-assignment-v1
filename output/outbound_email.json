@@ -8,32 +8,32 @@
   "customer_po_number": "MLHG-PO-104772",
   "subtotal": 113983.69,
   "taxes": {
-    "Ontario HST 13%": 12524.03,
-    "Qu\u00e9bec GST 5%": 882.25,
-    "Qu\u00e9bec QST 9.975%": 1760.09
+    "HST (ON) 13%": 12524.03,
+    "GST (QC) 5%": 882.25,
+    "QST (QC) 9.975%": 1760.09
   },
   "total_due": 129150.06,
   "ship_to_locations": [
     {
-      "site_name": "MLHG Toronto Operations Centre (Site A)",
+      "site_name": "MLHG Toronto Operations Centre",
       "address": "200 Front St W, 21st Floor (Dock access via Simcoe St), Toronto, ON M5V 3L2 Canada",
       "receiving_hours": "Mon\u2013Fri 08:00\u201314:00 (appointment required)",
       "delivery_window": "2026-01-29 to 2026-02-03, 08:00\u201314:00"
     },
     {
-      "site_name": "MLHG Ottawa Training & Fulfillment (Site B)",
+      "site_name": "MLHG Ottawa Training & Fulfillment",
       "address": "88 Industrial Ave, Ottawa, ON K1S 5H4 Canada",
       "receiving_hours": "Mon\u2013Thu 07:30\u201315:30 (appointment required)",
       "delivery_window": "2026-01-30 to 2026-02-04, 07:30\u201315:30"
     },
     {
-      "site_name": "MLHG Montr\u00e9al Clinic Admin (Site C)",
+      "site_name": "MLHG Montr\u00e9al Clinic Admin",
       "address": "410 Rue Saint-Jacques, Suite 900, Montr\u00e9al, QC H2Y 1S1 Canada",
       "receiving_hours": "Lun\u2013Ven 09:00\u201316:00 (rendez-vous requis)",
       "delivery_window": "2026-02-03 to 2026-02-07, 09:00\u201316:00"
     }
   ],
-  "notes": "Primary Project: \"Harborview Seating Refresh \u2014 Phase 2\". Internal cost centres: TOR-OPS-221 / OTT-TRN-114 / MTL-ADM-038. Please reference the Invoice Number (found in the header barcode image) on all remittances.",
+  "notes": "Primary Project: \"Harborview Seating Refresh \u2014 Phase 2\". Internal MLHG Cost Centre(s): TOR-OPS-221 / OTT-TRN-114 / MTL-ADM-038.",
   "line_items": [
     {
       "sku": "CHR-ERG-8400-BLK",
@@ -79,7 +79,7 @@
     },
     {
       "sku": "ACC-FLR-GLIDE-SET",
-      "description": "Soft-Floor Glide Kit (set of 5) \u2014 for ErgoFlex 8400 series (reduces floor wear on vinyl/laminate)",
+      "description": "Soft-Floor Glide Kit (set of 5) \u2014 for ErgoFlex 8400 series",
       "quantity": 200.0,
       "unit_price": 12.0,
       "line_total": 2400.0
@@ -108,8 +108,8 @@
     {
       "sku": "FRG-FUEL-SURCHG",
       "description": "Fuel surcharge (rate per contract; applied to shipment)",
-      "quantity": 1.0,
-      "unit_price": 3475.19,
+      "quantity": null,
+      "unit_price": null,
       "line_total": 3475.19
     },
     {

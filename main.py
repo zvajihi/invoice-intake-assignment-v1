@@ -9,13 +9,12 @@ def main():
 
     args = parser.parse_args()
 
-    result = run_invoice_agent(
-        email_path=args.email,
-        pdf_path=args.pdf,
-    )
-
-    print(result)
-
+    try:
+        result = run_invoice_agent(email_path=args.email,
+                                    pdf_path=args.pdf)
+        print(result)
+    except Exception as e:
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
