@@ -15,9 +15,11 @@ The agent processes:
     -   A human-readable summary
     -   A structured JSON payload suitable for downstream systems
 
-The system is designed to balance: - Structured LLM-based extraction -
-Deterministic Python-based formatting - Controlled token usage -
-Reliability under limited API credits
+The system is designed to balance: 
+- Structured LLM-based extraction 
+- Deterministic Python-based formatting 
+- Controlled token usage 
+- Reliability under limited API credits
 
 ------------------------------------------------------------------------
 
@@ -27,11 +29,14 @@ The system follows a hybrid agentic design:
 
 ### 1. Agent Layer
 
-The agent: - Decides which tool to call - Executes tools sequentially -
-Stops when the workflow is complete
+The agent: 
+- Decides which tool to call 
+- Executes tools sequentially 
+- Stops when the workflow is complete
 
-The workflow is not hard-coded in order. The model determines when to: -
-Call `extract_invoice_data` - Then call `send_notification`
+The workflow is not hard-coded in order. The model determines when to: 
+- Call `extract_invoice_data` 
+- Then call `send_notification`
 
 A loop is used to allow multi-step tool execution until completion.
 
@@ -65,8 +70,10 @@ The `send_notification` tool:
 -   Builds a deterministic summary in Python
 
 The LLM is not used for final formatting.\
-Formatting is handled in Python to: - Prevent mutation of financial
-values - Reduce token cost - Improve reliability
+Formatting is handled in Python to: 
+- Prevent mutation of financial values 
+- Reduce token cost 
+- Improve reliability
 
 ------------------------------------------------------------------------
 
@@ -75,8 +82,10 @@ values - Reduce token cost - Improve reliability
 Although the workflow is agent-driven, structured invoice data is stored
 locally after extraction and reused during notification.
 
-This avoids: - Re-serialization of large JSON payloads - Token waste -
-Risk of the model mutating structured data
+This avoids: 
+- Re-serialization of large JSON payloads 
+- Token waste 
+- Risk of the model mutating structured data
 
 The agent controls sequencing.\
 Python guarantees deterministic data flow.
@@ -161,10 +170,12 @@ The system generates:
 
 ### Scalability
 
-The architecture can be extended to: - Support multiple PDF
-attachments - Chunk large invoices by logical sections - Add validation
-checks (e.g., subtotal + taxes = total) - Add duplicate invoice
-detection - Add retry logic for extraction failures
+The architecture can be extended to: 
+- Support multiple PDF attachments 
+- Chunk large invoices by logical sections 
+- Add validation checks (e.g., subtotal + taxes = total) 
+- Add duplicate invoice detection 
+- Add retry logic for extraction failures
 
 ------------------------------------------------------------------------
 
