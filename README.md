@@ -52,10 +52,11 @@ The `extract_invoice_data` tool:
 -   Calls `gpt-5-mini` for structured extraction
 -   Validates output using Pydantic schema
 
-Design decisions: - PDF text is truncated to control token usage -
-Vision input is used to ensure invoice number extraction from header
-images - Strict JSON schema reduces hallucination risk - Pydantic
-validation ensures structured integrity
+Design decisions: 
+- PDF text is truncated to control token usage 
+- Vision input is used to ensure invoice number extraction from header images 
+- Strict JSON schema reduces hallucination risk 
+- Pydantic validation ensures structured integrity
 
 ------------------------------------------------------------------------
 
